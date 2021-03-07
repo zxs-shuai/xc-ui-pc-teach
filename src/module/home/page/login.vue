@@ -26,6 +26,7 @@
 import PHead from '@/base/components/head.vue';
 import utilApi from '../../../common/utils';
 import * as loginApi from '../api/home';
+
 export default {
 	components:{
 		PHead
