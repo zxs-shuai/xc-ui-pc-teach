@@ -31,7 +31,7 @@
       <!--分页-->
       <el-col :span="24" class="toolbar">
         <el-pagination background layout="prev, pager, next" @current-change="handleCurrentChange" :page-size="size"
-                       :total="total" :current-page="page"
+                       :total=total :current-page="10"
                        style="float:right;">
         </el-pagination>
       </el-col>

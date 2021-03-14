@@ -27,6 +27,15 @@ export const findTeachplanList = courseid => {
 export const addTeachplan = teachplah => {
   return http.requestPost(apiUrl+'/course/teachplan/add',teachplah)
 }
+/*查询课程基本信息*/
+export const getCoursebaseById = courseid => {
+  return http.requestQuickGet(apiUrl+'/course/coursebase/get/'+courseid)
+}
+/*修改课程基本信息*/
+export const updateCoursebase =(id,courseMarket) => {
+  return http.requestPut(apiUrl+'/course/coursebase/update/'+id,courseMarket)
+}
+
 
 //保存课程图片地址到课程数据 库
 export const addCoursePic= (courseId,pic) => {
@@ -58,3 +67,19 @@ export const findCourseView = courseId => {
 export const savemedia = teachplanMedia => {
   return http.requestPost(apiUrl+'/course/savemedia',teachplanMedia);
 }
+
+/*查询课程营销信息*/
+export const getCourseMarketById =  courseid => {
+  return http.requestQuickGet(apiUrl+'/course/coursemarket/get/'+courseid)
+}
+/*修改课程营销信息*/
+export const updateCourseMarket = (id,courseMarket) => {
+  return http.requestPost(apiUrl+'/course/coursemarket/update/'+id ,courseMarket)
+}
+
+
+/*数据字典 */
+export const sys_getDictionary= dType => {
+  return http.requestQuickGet(apiUrl+'/course/dictionary/get/'+dType)
+}
+

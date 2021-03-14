@@ -121,11 +121,11 @@
     },
     mounted(){
       //查询数据字典字典
-      systemApi.sys_getDictionary('201').then((res) => {
+      courseApi.sys_getDictionary('201').then((res) => {
 //        console.log(res);
         this.studymodelList = res.dvalue;
       });
-      systemApi.sys_getDictionary('200').then((res) => {
+      courseApi.sys_getDictionary('200').then((res) => {
         this.gradeList = res.dvalue;
       });
       //取课程分类

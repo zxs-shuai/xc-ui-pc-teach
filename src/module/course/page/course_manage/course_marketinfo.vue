@@ -94,13 +94,6 @@
       this.courseid = this.$route.params.courseid;
 
       this.courseMarketForm.id = this.courseid;
-      //查询字典
-      systemApi.sys_getDictionary('203').then((res) => {
-        this.chargeList = res.dvalue;
-      });
-      systemApi.sys_getDictionary('204').then((res) => {
-        this.validList = res.dvalue;
-      });
 
       //获取课程营销信息
       courseApi.getCourseMarketById(this.courseid).then((res) => {
